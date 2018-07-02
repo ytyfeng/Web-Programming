@@ -8,9 +8,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 	<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
 
 	<style type="text/css">
 
@@ -58,6 +62,45 @@
 	</div>
   <script>
 	  // your solution here
+    $( function() {
+    $( "#drag-box" ).draggable(
+      {revert: "invalid"});
+      
+      $( "#drop-box-2" ).droppable({
+      over: function(event, ui) {
+        $( "#drag-box" ) 
+          .css( "background", "#B1040E" )
+      }
+      });
+      
+      
+      $( "#drop-box-1" ).droppable({
+      over: function(event, ui) {
+        $( "#drag-box" ) 
+          .css( "background", "#006CB8" )
+      }
+      });
+      
+    $( "#drop-box-2" ).droppable({
+      drop: function( event, ui ) {
+        $( "#drag-box" )
+          .css( "background", "#820000" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+  });
+      
+     $( "#drop-box-1" ).droppable({
+       drop: function (event, ui) {
+         $( "#drag-box" )
+            .css( "background", "#00548f" )
+            .find( "p" )
+               .html( "Dropped!" );
+      }
+     });
+     
+     
+});
   </script>
 </body>
 </html>

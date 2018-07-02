@@ -8,13 +8,28 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" /> 
 
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
 	</head>
 	<body>
 		<!-- Your layout here -->
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 bg-red" style="height:10vh; width:100vw">
+    </div>
+  </div>
+  
+      <div class="row">
+        <div class="col-xs-6 bg-green" style="height:30vh; width:50vw"></div>
+        <div class="col-xs-6 bg-yellow" style="height:30vh; width:50vw"></div>
+      </div>
+  
+    <div class="row">
+        <div class="col-xs-12 bg-blue" style="height:60vh; width:100vw"></div>
+      </div>
+      
+  </div>
 	</body>
 </html>
